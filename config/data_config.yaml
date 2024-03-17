@@ -1,0 +1,12 @@
+# Description: Configuration file for data
+
+# General parameters
+general:
+  1:1
+
+# Dataset specific parameters
+test1:
+  1:1
+  2:2
+  3:3
+  
