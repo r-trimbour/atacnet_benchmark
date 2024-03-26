@@ -3,7 +3,7 @@ from snakemake.utils import min_version
 min_version("7.0.0")
 
 configfile: "config/data_config.yaml"
-samples = ["test1"] #test2
+samples = ["test2"]
 
 # Target rule to define the desired final output
 rule all:
