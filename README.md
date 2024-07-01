@@ -1,1 +1,1 @@
-This repository contains the code to replicate the benchmark of Cicero and Circe package
+This repository contains the code to replicate the benchmark of the packages [Circe](https://github.com/cantinilab/Circe), in python, and [Cicero](https://github.com/cole-trapnell-lab/cicero-release), in R.
