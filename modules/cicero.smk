@@ -38,10 +38,26 @@ rule time_cicero:
         network = "results/{sample}/cicero/cicero_results.csv",
     params:
         distance_threshold = 500_000,
-        sample_num = 100
+        sample_num = 1500
     benchmark:
         "results/{sample}/cicero_time.txt"
     singularity:
         "envs/hummus2.sif"
     script:
         "../scripts/timed_cicero.R"
+
+# just redo for time
+#rule time_cicero:
+#    input:
+#        cicero_cds_rds = "results/{sample}/cicero/cicero_cds.RDS"
+#    output:
+#        network = "results/{sample}/cicero/cicero_results.csv",
+#    params:
+#        distance_threshold = 500_000,
+#        sample_num = 100
+#    benchmark:
+#        "results/{sample}/cicero_time.txt"
+#    singularity:
+#        "envs/hummus2.sif"
+#    script:
+#        "../scripts/timed_cicero2.R"

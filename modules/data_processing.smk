@@ -16,18 +16,18 @@ rule create_fake_data:
     script:
         "../scripts/create_data.py"
 
-#rule download_test2_data:
-#    output:
-#        mudata = "data/test2.h5mu",
-#        #"data/{sample}_ground_truth.tsv"
-#    params:
-#        url = "https://figshare.com/ndownloader/files/44639476?private_link=b0840d90e42e37fa165f"
-#    conda:
-#        "../envs/atac_networks.yaml"
-#    shell:
-#        """
-#        wget {params.url} -O {output.mudata}
-#        """
+rule download_test2_data:
+    output:
+        mudata = "data/test2.h5mu",
+        #"data/{sample}_ground_truth.tsv"
+    params:
+        url = "https://figshare.com/ndownloader/files/44639476?private_link=b0840d90e42e37fa165f"
+    conda:
+        "../envs/atac_networks.yaml"
+    shell:
+        """
+        wget {params.url} -O {output.mudata}
+        """
 
 rule preprocess_test2_data:
     input:

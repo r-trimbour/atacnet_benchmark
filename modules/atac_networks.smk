@@ -3,7 +3,7 @@ rule run_atac_networks:
         cicero_cds = "results/{sample}/cicero/cicero_cds.tsv",
         #atac = "data/{sample}.csv.gz"
     params:
-        distance_threshold = 500000,
+        distance_threshold = 500_000,
         number_cells_per_clusters = 10
     benchmark:
         "results/{sample}/atacnet_time.txt"

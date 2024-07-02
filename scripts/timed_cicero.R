@@ -16,7 +16,9 @@ run_cicero <- function(cds,
   if (!silent) print("Starting Cicero")
   if (!silent) print("Calculating distance_parameter value")
   distance_parameters <- cicero::estimate_distance_parameter(cds, window=window,
-                                  maxit = 100, sample_num = sample_num,
+                                   maxit = 100, 
+                                   sample_num = sample_num,
+                                   max_sample_windows = sample_num,
                                    distance_constraint = 250000,
                                    distance_parameter_convergence = 1e-22,
                                    genomic_coords = genomic_coords)
