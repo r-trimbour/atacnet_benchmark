@@ -9,8 +9,8 @@ samples = ["test2"]
 rule all:
     input:
         #expand("results/{sample}/correlation_matrix.png", sample=samples),
-        expand("results/{sample}/atac_networks/atac_networks_results.csv", sample=samples),
-        expand("results/{sample}/cicero/cicero_results.csv", sample=samples)
+        expand("results/{sample}/circe/circe_networks_results.csv", sample=samples),
+        #expand("results/{sample}/cicero/cicero_results.csv", sample=samples)
 
 # 4. Compare Cicero and atac_networks
 rule compare:
@@ -28,11 +28,11 @@ module cicero:
     config: config
 use rule * from cicero
 
-# 2. Module to run atac_networks
-module atac_networks:
-    snakefile: "modules/atac_networks.smk"
+# 2. Module to run circe
+module circe:
+    snakefile: "modules/circe.smk"
     config: config
-use rule * from atac_networks
+use rule * from circe
 
 # 1. Generate/Preprocess the fake scATAC-seq data
 module data_generation:
