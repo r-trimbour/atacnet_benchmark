@@ -38,7 +38,7 @@ rule time_cicero:
         network = "results/{sample}/cicero/cicero_results.csv",
     params:
         distance_threshold = 500_000,
-        sample_num = 1500
+        sample_num = 1_500
     benchmark:
         "results/{sample}/cicero_time.txt"
     singularity:

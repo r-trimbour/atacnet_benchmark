@@ -23,9 +23,9 @@ an.compute_atac_network(
     window_size=distance_threshold,
     unit_distance=1000,
     distance_constraint=distance_threshold/2,
-    n_samples=200,
+    n_samples=100,
     n_samples_maxtry=500,
-    max_alpha_iteration=300,
+    max_alpha_iteration=100,
 )
 
 # Save results
